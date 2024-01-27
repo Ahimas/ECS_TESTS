@@ -340,9 +340,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SeekerPrefab: {fileID: 7115136098527425309, guid: a8a1913358f2af542800d7c7f3ff52d5, type: 3}
   TargetPrefab: {fileID: 4269519284079830336, guid: 21c835d38721fce4bb59e5119ff6644c, type: 3}
-  NumSeekers: 500
+  NumSeekers: 250
   NumTargets: 1000
-  Bounds: {x: 50, y: 50}
 --- !u!4 &1511686107
 Transform:
   m_ObjectHideFlags: 0

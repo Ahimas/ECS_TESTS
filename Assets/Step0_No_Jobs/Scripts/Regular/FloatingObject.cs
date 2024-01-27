@@ -7,7 +7,6 @@ namespace ECSTests
         private Vector3 _direction;
         private static Vector2 _bounds = new Vector2(50, 50);
         
-        // Start is called before the first frame update
         private void Start()
         {
             var dir = Random.insideUnitCircle;
