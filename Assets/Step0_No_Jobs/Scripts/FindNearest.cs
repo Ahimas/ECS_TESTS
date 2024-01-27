@@ -4,24 +4,37 @@ namespace ECSTests
 {
     public class FindNearest : MonoBehaviour
     {
+        [SerializeField] private Spawner spawner;
+
+        private Vector3[] _nearestTargetPosition;
+
+        private void Start()
+        {
+            _nearestTargetPosition = new Vector3[spawner.NumSeekers];
+        }
+        
         private void Update()
         {
-            Vector3 nearestTargetPosition = new Vector3();
-            float nearestDistance = float.MaxValue;
-
-            foreach (var target in Spawner.TargetTransforms)
+            for (int i = 0; i < spawner.NumSeekers; i++)
             {
-                var offset = target.position - transform.position;
-                float distance = offset.sqrMagnitude;
+                float nearestDistance = float.MaxValue;
 
-                if (distance > nearestDistance) continue;
-                
-                nearestDistance = distance;
-                nearestTargetPosition = target.position;
-                
+                foreach (var target in Spawner.TargetTransforms)
+                {
+                    var offset = target.position - Spawner.SeekerTransforms[i].position;
+                    float distance = offset.sqrMagnitude;
+                    
+                    if (distance > nearestDistance) continue;
+                    
+                    nearestDistance = distance;
+                    _nearestTargetPosition[i] = target.position;
+                }
             }
 
-            Debug.DrawLine(transform.position, nearestTargetPosition);
+            for (int i = 0; i < spawner.NumSeekers; i++)
+            {
+                Debug.DrawLine(Spawner.SeekerTransforms[i].position, _nearestTargetPosition[i]);
+            }
         }
     }
 }

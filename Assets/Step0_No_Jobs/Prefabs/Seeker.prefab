@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6648474658375065001}
   - component: {fileID: 1502396097321012503}
   - component: {fileID: 2412294450794396694}
-  - component: {fileID: 6442155856257068008}
   - component: {fileID: 7691029540846608004}
   m_Layer: 0
   m_Name: Seeker
@@ -85,18 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6442155856257068008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7115136098527425309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54a612ba79443b3449b2a6e0e92f3419, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7691029540846608004
 MonoBehaviour:
   m_ObjectHideFlags: 0
